@@ -1,8 +1,19 @@
 import './App.css';
 import { useState } from 'react';
 import { ethers } from 'ethers'
+import styled from 'styled-components';
 import Greeter from './artifacts/contracts/Greeter.sol/Greeter.json'
 import Token from './artifacts/contracts/Token.sol/Token.json'
+
+const Button = styled.button`
+  background-color: #35D07F;
+  color: white;
+  font-size: 20px;
+  padding: 10px 60px;
+  border-radius: 5px;
+  margin: 10px 0px;
+  cursor: pointer;
+`;
 
 const greeterAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3"
 const tokenAddress = "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512"
@@ -69,13 +80,13 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <button onClick={fetchGreeting}>Fetch Greeting</button>
-        <button onClick={setGreeting}>Set Greeting</button>
+        <Button onClick={fetchGreeting}>Fetch Greeting</Button>
+        <Button onClick={setGreeting}>Set Greeting</Button>
         <input onChange={e => setGreetingValue(e.target.value)} placeholder="Set greeting" />
 
         <br />
-        <button onClick={getBalance}>Get Balance</button>
-        <button onClick={sendCoins}>Send Coins</button>
+        <Button onClick={getBalance}>Get Balance</Button>
+        <Button onClick={sendCoins}>Send Coins</Button>
         <input onChange={e => setUserAccount(e.target.value)} placeholder="Account ID" />
         <input onChange={e => setAmount(e.target.value)} placeholder="Amount" />
       </header>
