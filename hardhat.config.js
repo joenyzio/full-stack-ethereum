@@ -35,6 +35,10 @@ module.exports = {
     hardhat: {
       chainId: 1337,
     },
+    ropsten: {
+      url: "https://ropsten.infura.io/v3/c55b62fad7c449f8aeaf2fb58ce5fed7",
+      accounts: ["0xe7f86a5e17753b467f6dfb18f2db657bcdbd9849406be0eb1282be8839a52cdc"]
+    },
     // ropsten: {
     //   url: "https://ropsten.infura.io/v3/projectid",
     //   accounts: [process.env.a2key]
@@ -44,6 +48,6 @@ module.exports = {
     //   accounts: [process.env.a2key]
     // }
   },
-  solidity: "0.8.3",
+  solidity: "0.8.4",
 };
 
